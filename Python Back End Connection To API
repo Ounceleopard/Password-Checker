@@ -1,1 +1,9 @@
 https://haveibeenpwned.com/API/v2
+
+#GET
+GET/1.1  
+https://haveibeenpwned.com/api/breachedaccount/{account}
+
+#Reponse 
+HTTP/1.1 200 OK
+["Adobe","Gawker","Stratfor"]
