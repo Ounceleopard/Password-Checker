@@ -4,6 +4,9 @@ https://haveibeenpwned.com/API/v2
 GET/1.1  
 https://haveibeenpwned.com/api/breachedaccount/{account}
 
+#V3
+https://www.troyhunt.com/authentication-and-the-have-i-been-pwned-api/
+
 #Reponse 
 HTTP/1.1 200 OK
 ["Adobe","Gawker","Stratfor"]
