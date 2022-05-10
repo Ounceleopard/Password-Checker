@@ -2,7 +2,7 @@ from tkinter import *
 import random
 
 root = Tk()
-root.title("CSCI 401 Project")
+root.title("Easy Pass")
 width = 400
 height = 200
 screen_width = root.winfo_screenwidth()
