@@ -1,7 +1,7 @@
 import requests
 
 response = request.get("https://www.troyhunt.com/authentication-and-the-have-i-been-pwned-api/")
-print(response.status_code)
+print(response.text)
 
 https://haveibeenpwned.com/API/v2
 
