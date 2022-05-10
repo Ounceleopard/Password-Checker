@@ -1,5 +1,7 @@
 import requests
 
+response = request.get("")
+
 https://haveibeenpwned.com/API/v2
 
 #GET
