@@ -1,3 +1,5 @@
+import requests
+
 https://haveibeenpwned.com/API/v2
 
 #GET
