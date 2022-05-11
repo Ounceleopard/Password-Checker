@@ -5,6 +5,13 @@ print(response.text)
 print(result['text'])
 https://haveibeenpwned.com/API/v2
 
+
+
+GET https://haveibeenpwned.com/api/v3/{service}/{parameter}
+hibp-api-key: [your key]
+
+
+
 #GET
 GET/1.1  
 https://haveibeenpwned.com/api/breachedaccount/{account}
