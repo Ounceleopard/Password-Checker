@@ -57,7 +57,7 @@ password.grid(row=0, column=1)
 btn_generate = Button(Form, text="Check", width=20, command= checkPassword)
 btn_generate.grid(row=1, columnspan=2)
 #====================================OUTPUT WIDGET==============================
-password = Entry(Form, textvariable=password, font=(18), width=16)
+password = output(Form, textvariable=password, font=(18), width=16)
 password.grid(row=6, column=1)
 
 root.mainloop()
