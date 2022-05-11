@@ -1,4 +1,4 @@
 import requests
 
 GET https://haveibeenpwned.com/api/v3/{service}/{parameter}
-hibp-api-key: [your key]
+hibp-api-key: [01d039b307494dc68509e0e6a358699c]
