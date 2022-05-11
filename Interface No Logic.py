@@ -54,7 +54,7 @@ Bottom = Frame(root, width=width)
 Bottom.pack(side=TOP)
 
 # LABEL WIDGET
-lbl_title = Label(Top, width=width, font=('arial', 20), text="Machine Learning Project", bd=1, relief='flat')
+lbl_title = Label(Top, width=width, font=('arial', 21), text="Machine Learning Project", bd=1, relief='flat')
 lbl_title.pack(fill=X)
 lbl_password = Label(Form, font=('arial', 14), text="Enter Password ", bd=11)
 lbl_password.grid(row=0, pady=17)
