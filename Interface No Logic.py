@@ -2,7 +2,7 @@ from tkinter import *
 import hashlib
 import random
 import requests
-
+#
 root = Tk()
 root.title("EASY PASS")
 width = 400
@@ -29,7 +29,7 @@ def checkPassword():
     password_dict = {}
     password_list = response.text.split("\r\n")
     for pwd in password_list:
-        hash = pwd.split(":") 
+        hash = pwd.split(":")
         password_dict[hash[0]] = hash[1]
     # Output to program display
     if sha_post in password_dict.keys():
@@ -38,13 +38,13 @@ def checkPassword():
         print("No breaches detected!")
 #====================================VARIABLES==================================
 PASSWORD = StringVar()
- 
+
 #====================================FRAME======================================
 Top = Frame(root, width=width)
 Top.pack(side=TOP)
 Form = Frame(root, width=width)
 Form.pack(side=TOP)
- 
+
 #====================================LABEL WIDGET===============================
 lbl_title = Label(Top, width=width, font=('arial', 16), text="Machine Learning Project", bd=1, relief=SOLID)
 lbl_title.pack(fill=X)
