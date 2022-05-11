@@ -1,5 +1,9 @@
 from tkinter import *
+import hashlib
 import random
+import requests
+
+
 
 root = Tk()
 root.title("CSCI 401 Project")
@@ -10,13 +14,28 @@ screen_height = root.winfo_screenheight()
 x = (screen_width/2) - (width/2)
 y = (screen_height/2) - (height/2)
 root.geometry("%dx%d+%d+%d" % (width, height, x, y))
-#=====================================METHODS===================================
-def Random():
-   # alphabet = "abcdefghijklmnopqrstuvwxyz"
-   # length = 8
-    new_password = ""
 
-    PASSWORD.set(new_password);
+#=====================================METHODS===================================
+def checkPassword():
+    password_input = password.get()
+    sha_password = hashlib.sha1(password_input.encode()).hexdigest()
+    sha_prefix = sha_password[0:5]
+    sha_post = sha_password[5:].upper()
+
+    API_KEY = "01d039b307494dc68509e0e6a358699c"
+    response_url = "https://api.pwnedpasswords.com/range/" + sha_prefix
+
+    response = requests.request("GET", response_url)
+
+    #Split the response text based on \r\n
+    password_dict = {}
+    password_list = response.text.split("\r\n")
+    for pwd in password_list:
+        hash = pwd.split(":") 
+        password_dict[hash[0]] = hash[1]
+    
+    #if sha_post in password_dict.keys():
+        #if statement that searches through the password_dict with sha_post and prints if password has been found and breached, if so how many times. if not then password is safe and good
 #====================================VARIABLES==================================
 PASSWORD = StringVar()
  
@@ -35,5 +54,7 @@ lbl_password.grid(row=0, pady=15)
 password = Entry(Form, textvariable=PASSWORD, font=(18), width=16)
 password.grid(row=0, column=1)
 #====================================BUTTON WIDGET==============================
-btn_generate = Button(Form, text="Check", width=20, command=Random)
+btn_generate = Button(Form, text="Check", width=20, command= checkPassword)
 btn_generate.grid(row=1, columnspan=2)
+
+root.mainloop()
