@@ -2,7 +2,7 @@ from tkinter import *
 import hashlib
 import random
 import requests
-#
+
 root = Tk()
 root.title("EASY PASS")
 width = 400
