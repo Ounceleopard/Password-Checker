@@ -3,10 +3,8 @@ import hashlib
 import random
 import requests
 
-
-
 root = Tk()
-root.title("CSCI 401 Project")
+root.title("EASY PASS")
 width = 400
 height = 200
 screen_width = root.winfo_screenwidth()
@@ -33,11 +31,11 @@ def checkPassword():
     for pwd in password_list:
         hash = pwd.split(":") 
         password_dict[hash[0]] = hash[1]
-    
+    # Output to program display
     if sha_post in password_dict.keys():
         print('Password has been breached {0}'.format(password_dict[sha_post]))
     else:
-        print("hello world!")
+        print("No breaches detected!")
 #====================================VARIABLES==================================
 PASSWORD = StringVar()
  
