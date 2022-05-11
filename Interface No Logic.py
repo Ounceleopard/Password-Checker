@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from tkinter import *
 import hashlib
 import random
@@ -35,8 +34,10 @@ def checkPassword():
         hash = pwd.split(":") 
         password_dict[hash[0]] = hash[1]
     
-    #if sha_post in password_dict.keys():
-        #if statement that searches through the password_dict with sha_post and prints if password has been found and breached, if so how many times. if not then password is safe and good
+    if sha_post in password_dict.keys():
+        print('Password has been breached {0}'.format(password_dict[sha_post]))
+    else:
+        print("hello world!")
 #====================================VARIABLES==================================
 PASSWORD = StringVar()
  
