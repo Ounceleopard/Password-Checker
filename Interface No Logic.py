@@ -34,10 +34,10 @@ def checkPassword():
         password_dict[hash[0]] = hash[1]
     # Output to program display
     if sha_post in password_dict.keys():
-       lbl_title = Label(Bottom, width=width, font=('arial', 16), fg = 'green',text='Password has been breached {0}'.format(password_dict[sha_post]), bd=1, relief='flat')
+       lbl_title = Label(Bottom, width=width, font=('arial', 16), fg = 'red',text='Password has been breached {0}'.format(password_dict[sha_post]), bd=1, relief='flat')
        lbl_title.pack(fill=X)
     else:
-        lbl_title = Label(Bottom, width=width, font=('arial', 16), fg = 'red',text="No breaches detected!", bd=1, relief='flat')
+        lbl_title = Label(Bottom, width=width, font=('arial', 16), fg = 'green',text="No breaches detected!", bd=1, relief='flat')
         lbl_title.pack(fill=X)
         
 # VARIABLES
