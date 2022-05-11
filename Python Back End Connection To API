@@ -1,15 +1,4 @@
-https://haveibeenpwned.com/API/v2
+import requests
 
-#GET
-GET/1.1  
-https://haveibeenpwned.com/api/breachedaccount/{account}
-
-#V3
-https://www.troyhunt.com/authentication-and-the-have-i-been-pwned-api/
-
-#V3 All class comparison 
-GET https://haveibeenpwned.com/api/v3/dataclasses
-
-#Reponse 
-HTTP/1.1 200 OK
-["Adobe","Gawker","Stratfor"]
+GET https://haveibeenpwned.com/api/v3/{service}/{parameter}
+hibp-api-key: [01d039b307494dc68509e0e6a358699c]
