@@ -21,7 +21,7 @@ def checkPassword():
     sha_prefix = sha_password[0:5]
     sha_post = sha_password[5:].upper()
     # Key Is Valid Until JUNE 11 2022: For New key https://haveibeenpwned.com/API/Key
-    API_KEY = "01d039b307494dc68509e0e6a358699c"
+    API_KEY = ""
     response_url = "https://api.pwnedpasswords.com/range/" + sha_prefix
 
     response = requests.request("GET", response_url)
