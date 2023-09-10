@@ -5,7 +5,7 @@ import requests
 
 root = Tk()
 
-root.title("CSCI 401 Machine Learning Group: Brayan | Steven | Tamara")
+root.title("Password Checker")
 width = 500
 height = 600
 screen_width = root.winfo_screenwidth()
