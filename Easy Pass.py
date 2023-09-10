@@ -20,7 +20,7 @@ def checkPassword():
     sha_password = hashlib.sha1(password_input.encode()).hexdigest()
     sha_prefix = sha_password[0:5]
     sha_post = sha_password[5:].upper()
-    # Key Is Valid Until JUNE 11 2022: For New key https://haveibeenpwned.com/API/Key
+    # Input your API key here
     API_KEY = ""
     response_url = "https://api.pwnedpasswords.com/range/" + sha_prefix
 
