@@ -1,7 +1,7 @@
 from tkinter import *
 import hashlib
 import random
-import requests
+import requests # Remove if you don't have a API key 
 
 root = Tk()
 
